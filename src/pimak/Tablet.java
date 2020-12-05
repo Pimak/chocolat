@@ -125,4 +125,13 @@ public class Tablet {
         '}';
         return res;
     }
+    public String getHash(){
+        StringBuilder hash = new StringBuilder();
+        for (int i = 1; i <= HORIZONTAL_SIZE; i++) {
+            for (int j = 1; j <= VERTICAL_SIZE; j++) {
+                hash.append(this.squares[i][j] ? 1 : 0);
+            }
+        }
+        return hash.toString();
+    }
 }
